@@ -5,14 +5,10 @@
  */
 package CodingNinjas;
 
-import java.util.List;
-
 /**
  *
  * @author Vinay Jain
  */
 public class iicc_round2_removeloop {
-    public static List noLoop(List head , int k) {
-	
-    }
+   
 }
