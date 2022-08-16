@@ -14,21 +14,29 @@ public class pots_of_gold_game {
     class GfG
     {
         
-        public int cal_Max(int ar[], int start, int end){
-            if(end - start == 1)
-                return Math.max(ar[start], ar[end]);
-            if(end - start == 0)
-                return ar[start];
-            int val = cal_Max(ar, start+1, end);
-            int val1 = cal_Max(ar, start, end+1);
-            
-            return Math.max(val, val1);
-            
-        }
-        
 	public int maxCoins(int ar[],int n)
 	{
-            return cal_Max(ar, 0, n-1);
+            int dp[][] = new int[n+1][n+1];
+            
+            for(int len = 1 ; len <= n ; len++){
+                for(int i = 0 ; i+len <= n ; i++){
+                    int j = i + len - 1;
+                    int x, y, z;
+                    x = (i+2 <= j) ? dp[i+2][j] : 0;
+                    y = (i+1 <= j-1 ) ? dp[i+1][j-1] : 0;
+                    z = (i <= j-2) ? dp[i][j-2] : 0;
+                    
+                    dp[i][j] = Math.max(ar[i]+Math.min(x, y), ar[j] + Math.min(y, z));
+                }
+            }
+            
+            for(int i = 0 ; i < n ; i++){
+                for(int j = 0 ; j < n ; j++)
+                    System.out.println(dp[i][j]);
+            }
+            
+            return dp[0][n-1];
+            
         }
     }
     
