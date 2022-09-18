@@ -10,5 +10,9 @@ package LeetCode;
  * @author Vinay Jain
  */
 public class temp {
-    
+    public static void main(String args[]){
+        String s = "abdd";
+        System.out.println("\n "+(s.charAt(1) - 97));
+            
+    }
 }
