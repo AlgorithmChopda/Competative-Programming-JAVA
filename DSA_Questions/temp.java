@@ -5,7 +5,9 @@
  */
 package DSA_Questions;
 
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  *
@@ -13,12 +15,17 @@ import java.util.Scanner;
  */
 public class temp {
      public static void main(String args[]){
-         Scanner sc = new Scanner(System.in);
-         int t = sc.nextInt();
-         
-         while(t-- > 0){
-             double a = sc.nextDouble();
-             
+         List<List<Integer>> op = new ArrayList<>();
+        //op.get(0).remove(6);
+         int ar[] = new int[10];
+         for(int i = 0 ; i < ar.length ; i++){
+             for(int j = i ; j < ar.length ; j++){
+                 int ar1[] = Arrays.copyOfRange(ar, i, j);
+                 ArrayList<Integer> ar12 = new ArrayList<>();
+                 ArrayList<Integer> ar132 = new ArrayList<>(ar12);
+                 //op.add(new ArrayList<>(Arrays.asList(Arrays.copyOfRange(ar, i, j))));
+             }
          }
+                 
     }
 }
