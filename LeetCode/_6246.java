@@ -84,6 +84,10 @@ public class _6246 {
             
             return 0;
         }
+
+        public void solve(Scanner sc) {
+
+        }
         
         
     }

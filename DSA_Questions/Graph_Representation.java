@@ -10,6 +10,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Scanner;
+import javafx.util.Pair;
 
 /**
  *
@@ -70,7 +71,7 @@ public class Graph_Representation {
             for(int j = 0 ; j < edges ; j++){
                 if(i == j)
                     continue;
-                if(mat[i][j] == 1) // eddges is present
+                if(mat[i][j] == 1) // edges is present
                     System.out.print(" "+(j+1));
             }
         }
@@ -156,6 +157,18 @@ public class Graph_Representation {
        }
     }
     
+    public static void graph_weight(Scanner sc){
+        int n = 3;
+        ArrayList<Pair<Integer, Integer>> ar[] = new ArrayList[n];
+        for(int i = 0 ; i < n ; i++)
+            ar[i] = new ArrayList<>();
+        
+        int edges = 5;
+        int u = 0, v = 0, w = 0;
+        for(int i = 0 ; i < edges ; i++)
+            ar[u].add(new Pair(v, w));
+        
+    }
     
     public static void DFS(HashMap<String, ArrayList<String>> hm, int edges, HashSet<String> visited, String ele){
         visited.add(ele);

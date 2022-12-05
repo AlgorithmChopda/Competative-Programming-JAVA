@@ -9,10 +9,10 @@ public class HackerRank_ArrayManipulation {
         
         List<List<Integer>> ar= new ArrayList<>();
         
-        ar.add(new ArrayList<Integer>());
-        ar.add(new ArrayList<Integer>());
-        ar.add(new ArrayList<Integer>());
-        ar.add(new ArrayList<Integer>());
+        ar.add(new ArrayList<>());
+        ar.add(new ArrayList<>());
+        ar.add(new ArrayList<>());
+        ar.add(new ArrayList<>());
 
         
         
