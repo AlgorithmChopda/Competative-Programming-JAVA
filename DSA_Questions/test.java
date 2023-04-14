@@ -8,7 +8,7 @@ package DSA_Questions;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.util.HashSet;
 
 /**
  *
@@ -21,9 +21,8 @@ public class test {
         String b[] = br.readLine().split(" ");
         String c[] = br.readLine().split(" ");
         
-        PrintWriter writer = new PrintWriter(System.out);    
-      writer.write("Javatpoint provides tutorials of all technology.");   
-      writer.flush();  
-      writer.close();
+        HashSet<Integer> set = new HashSet<>();
+
+
     }
 }
