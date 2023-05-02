@@ -6,6 +6,8 @@
 package DSA_Questions;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 
 /**
@@ -44,4 +46,58 @@ public class Topological_Sort {
                 TopologicalSort(next, ar, visited, op);
         op.add(start);
     }
+    
+    
+    // Topological sort using Kahn algorithm (BFS)
+    public static ArrayList<Integer> topologicalSort(ArrayList<ArrayList<Integer>> edge, int n) 
+    {
+        ArrayList<Integer> ar[] = new ArrayList[n];
+        
+        for(int i = 0 ; i < n ; i++) {
+            ar[i] = new ArrayList<>();
+        }
+        
+        // building graph
+        int cnt[] = new int[n];
+        for(int i = 0; i < edge.size() ; i++) {
+            ar[edge.get(i).get(0)].add(edge.get(i).get(1));
+            cnt[edge.get(i).get(1)]++;
+        }
+        
+        Queue<Integer> q = new LinkedList<>();
+        
+        // adding nodes with indegree 0
+        for(int i = 0 ; i < n ; i++) {
+            if(cnt[i] == 0) {
+                q.add(i);
+            }    
+        }
+        
+        // int op[] = new int[n];
+        // int index = 0;
+        
+        ArrayList<Integer> op = new ArrayList<>();
+        
+        // Topological sort
+        while(!q.isEmpty()) {
+            int node = q.remove();
+            // op[index++] = node;
+            op.add(node);
+            
+            for(int nei : ar[node]) {
+                cnt[nei]--;
+                if(cnt[nei] == 0) {
+                    q.add(nei);
+                }
+            }
+        }
+        
+        return op;
+    }
+    
+    
+    
+    
+    
+    
 }
