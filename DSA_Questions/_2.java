@@ -5,18 +5,32 @@
  */
 package DSA_Questions;
 
-import java.util.Arrays;
-
 /**
  *
  * @author Vinay Jain
  */
 public class _2 {
-    public static void main(String args[]){
-        int ar[] = {7, 10, 4, 3, 20, 15};
-        int k = 3;
+    
+    static boolean check(String s, int index, int sum) {
         
-        Arrays.sort(ar);
-        System.out.println(ar[k-1]); 
+        if(sum < 0)  return false;
+        System.out.println(sum);
+        if(sum == 0) return true;
+        int no = 0;
+        int val = 1;
+        for(int i = index ; i >= 0 ; i--) { 
+            no = (Integer.parseInt(s.charAt(i) + "")) * val + no;
+//            System.out.println(no);
+            if(check(s, i-1, sum - no)) return true;
+            val *= 10;
+        }
+        
+        return false;
+    }
+    
+    
+    public static void main(String args[]){
+        System.out.println(check("100", 2, 11));
+                
     }
 }

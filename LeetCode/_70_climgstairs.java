@@ -10,6 +10,15 @@ package LeetCode;
  * @author Vinay Jain
  */
 public class _70_climgstairs {
+
+    boolean isPrime(int no ) {
+        if(no <= 1) return false;
+        for(int i = 2; i * i <= no; i++){
+            if(no % i == 0) return false;
+        }
+        return true;
+    }
+
     public int climbStairs(int n) {
         
         if(n <= 2)  return n; 
