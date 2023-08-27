@@ -3,14 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package GFG;
+package LeetCode;
 
 /**
  *
  * @author Vinay Jain
  */
-public class temp {
-    public static void main(String args[]) {
-                
-    }
+public class _1601 {
+    
 }

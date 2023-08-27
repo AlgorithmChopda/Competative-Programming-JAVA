@@ -155,6 +155,33 @@ public class Biweekly_105 {
     }
     
     
+    
+    public int furthestDistanceFromOrigin(String ar) {
+        StringBuilder s = new StringBuilder(ar);
+        for(int i = 1 ; i < ar.length() ; i++) {
+            if(ar.charAt(i) == '_') {
+                s.append(ar.charAt(i - 1));
+            }else {
+                s.append(ar.charAt(i));
+            }
+        }
+        
+        for(int i = 0 ; i < ar.length() ; i++) {
+            int j = i;
+            int cnt = 0;
+            while(s.charAt(i) == s.charAt(j)) {
+                cnt++;
+                j++;
+            }
+        }
+        
+        return 0;
+    }
+    
+    
+    
+    
+    
 }
 
 

@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package GFG;
+package InterviewPreparation;
 
 /**
  *
  * @author Vinay Jain
  */
-public class temp {
+public class Strings {
     public static void main(String args[]) {
-                
+        
     }
 }
