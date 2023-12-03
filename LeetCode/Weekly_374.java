@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package DSA_Questions;
+package LeetCode;
 
 /**
  *
- * @author Vinay Chopda
+ * @author Vinay Jain
  */
-public class temp {
+public class Weekly_374 {
     
 }
