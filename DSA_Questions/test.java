@@ -11,6 +11,10 @@ package DSA_Questions;
  */
 public class test {
     public static void main(String args[]) {
+        String temp = "";
+        String str = "Vinay";
+        temp += str.charAt(0);
         
+        System.out.println(temp);
     }
 }
