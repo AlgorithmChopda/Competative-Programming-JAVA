@@ -34,11 +34,13 @@ public class Weekly_377 {
         
         row[len - 1] = m; col[len - 1] = n;
         
-        for(int i = 0 ; i = row.length ; i++) {
+        for(int i = 0 ; i < row.length ; i++) {
             for(int j = 0 ; j < col.length ; j++) {
-                x
+
             }
         }
+        
+        return 0;
     }
     
     class Temp {
